@@ -1,0 +1,28 @@
+{
+    "name": "Elmira",
+    "description": "A Smart Virtual Wardrobe",
+    "version": "1.0",
+    "manifest_version": 2,
+		"permissions": ["storage", "activeTab", "unlimitedStorage", "alarms"],
+    "content_scripts": [
+			{
+				"matches": [
+					"*://www.myntra.com/*"
+				],
+				"js": ["js/jquery-3.6.0.min.js", "js/elmira.js"]
+			},
+			{
+				"matches": ["<all_urls>"],
+				"js": ["js/otherpages.js"]
+			}
+		],
+		"browser_action": {
+			"default_popup": "popup.html"
+		},
+		"background": {
+			"scripts": ["js/background.js", "js/jquery-3.6.0.min.js"],
+			"persistent": false
+    },
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"
+
+}

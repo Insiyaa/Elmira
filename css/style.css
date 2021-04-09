@@ -1,0 +1,13 @@
+.card-img-top {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+}
+
+.column {
+    margin-bottom: 2rem;
+}
+
+.title {
+    text-align: center;
+}

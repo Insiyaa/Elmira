@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="min-width:300px;">
+  <head>
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+	  <div class="container-fluid w-100">
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="#">Elmira</a>
+			<a class="btn btn-sm btn-outline-secondary" type="button" id="export">Export</a>
+			<a class="btn btn-sm btn-outline-secondary" type="button" id="import">Import</a>
+
+		</nav>
+		<div class="row">
+			<div class="col-12 text-center">
+				<button type="button" id="addToWardrobe" class="btn btn-outline-success ward">Add to Wardrobe</button>
+				<button type="button" class="btn  btn-outline-info ward" id="showWardrobe">Show Wardrobe</button>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="card w-100 border-light">
+				<div class="card-body">
+				  <h5 class="card-title" id="score">0 %</h5>
+				  <h6 class="card-subtitle mb-2 text-muted">Confidence Score</h6>
+				  <a href="#" class="card-link" id="getScore">Get Score</a>
+				  <a tabindex="0" href="" id="info" data-toggle="popover" data-trigger="focus"  data-html=true data-content="Here we will tell you more about 'why this score?'">Info</a>
+					<div class="input-group input-group-sm mb-3" id="blistgroup">
+						<input type="text" class="form-control" id="property" placeholder="Property" aria-describedby="inputGroup-sizing-sm">
+						<input type="text" class="form-control" id="value" placeholder="Value" aria-describedby="inputGroup-sizing-sm">
+						<div class="input-group-append">
+							<button class="btn btn-sm btn-outline-secondary" type="button" id="blacklist" >Blacklist</button>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<medium class="text-muted openMyn"><a href="https://www.myntra.com/">Myntra</a></medium>
+				</div>
+			</div>
+		</div>
+
+
+	  </div>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/popup.js"></script>
+
+  </body>
+</html>
