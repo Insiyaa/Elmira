@@ -17,7 +17,13 @@
 			}
 		],
 		"browser_action": {
-			"default_popup": "popup.html"
+			"default_popup": "popup.html",
+			"default_icon": {
+				"16": "images/logo16.png",
+				"32": "images/logo32.png",
+				"48": "images/logo48.png",
+				"128": "images/logo128.png"
+			}
 		},
 		"background": {
 			"scripts": ["js/penalty.js", "js/background.js", "js/jquery-3.6.0.min.js"],
