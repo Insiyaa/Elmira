@@ -11,3 +11,11 @@
 .title {
     text-align: center;
 }
+
+.titlecase {
+    text-transform: capitalize;
+}
+
+table {
+    margin-top: 15px;
+}

@@ -20,7 +20,7 @@
 			"default_popup": "popup.html"
 		},
 		"background": {
-			"scripts": ["js/background.js", "js/jquery-3.6.0.min.js"],
+			"scripts": ["js/penalty.js", "js/background.js", "js/jquery-3.6.0.min.js"],
 			"persistent": false
     },
 	"content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"

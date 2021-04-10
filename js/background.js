@@ -1,6 +1,6 @@
-let color = '#3aa757';
 var productDetail = null;
 
+// console.log(penalty_data);
 
 function parseHTMLString(data, url) {
   html = $.parseHTML(data);
@@ -60,7 +60,6 @@ async function getScore(ext_data, detail) {
 
 
   // blacklisted product
-    
   function blacklistReturn() {
     return new Promise(function(resolve, reject) {
       let bkey;
@@ -95,7 +94,6 @@ async function getScore(ext_data, detail) {
     return {score: 0, messages: [`You have blacklisted <i> ${bvalue} ${bkey} </i>`]}
   }
 
-
   // no data
   if (ext_data.length == 0) {
     return {score: 1, messages: ["Your wardrobe is empty, go ahead and buy something!"]}
@@ -114,15 +112,14 @@ async function getScore(ext_data, detail) {
     return {score: 0, messages: ["You already own one."]}
   }
 
-  
-  
+  // calculate score
   messages_detail = {}
 
   for (const [key, value] of Object.entries(detail.specifications)) {
     // console.log(key, value);
     ext_data.forEach(element => {
       if (element.specifications[key] === value) {
-        matches += 1
+        matches += (1 * (penalty_data[key.toLowerCase()] || 1))
         messages_detail[key] = (messages_detail[key] || 0) + 1;
       } else {
         mismatches += 1

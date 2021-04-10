@@ -73,5 +73,9 @@ $('#getScore').click(function() {
     let messages = response.response.messages.slice(0, 5)
     $('#info').attr('data-content', messages);
     $('#score').html(`${score} %`)
+    if (score > 70) $('#score').addClass('text-success')
+    else if (score < 40) $('#score').addClass('text-danger')
+    else $('#score').addClass('text-warning')
+    
   });
 })
