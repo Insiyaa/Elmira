@@ -1,6 +1,6 @@
 # <img src='images/logo32.png'> Elmira 
 ## A Smart Virtual Wardrobe
-Elmira reads data from [Myntra](https://www.myntra.com/) and helps you keep track of your wardrobe (the items you own) and gives a score about which next item you should buy next.
+Elmira reads data from [Myntra](https://www.myntra.com/) and helps you keep track of your wardrobe (the items you own) and gives a score about which item you should buy next.
 
 
 ## Installation
